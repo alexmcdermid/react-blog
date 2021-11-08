@@ -55,10 +55,11 @@ class App extends Component {
          
           <Redirect to="/about" />
         </Switch>
+        {/* might add this to a seperate page at some point */}
         <div className='formContainer'>
         <Form className='form'>
-        <h3>Some form on everypage for contact</h3>
-          <Form.Group>
+        <h4>Contact</h4>
+          <Form.Group className='formGroup'>
             <Form.Label>Name</Form.Label>
             <Form.Control  
             name="name"
@@ -66,7 +67,7 @@ class App extends Component {
             value={this.state.name}
             onChange={this.handleFormChange}/>
           </Form.Group>
-          <Form.Group>
+          <Form.Group className='formGroup'>
             <Form.Label>Email</Form.Label>
             <Form.Control  
             name="email"
@@ -74,7 +75,7 @@ class App extends Component {
             value={this.state.email}
             onChange={this.handleFormChange}/>
           </Form.Group>
-          <Form.Group>
+          <Form.Group className='formGroup'>
             <Form.Label>Message</Form.Label>
             <Form.Control  
             name="message"
