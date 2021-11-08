@@ -4,6 +4,7 @@ import { Route, Switch, Redirect, Link } from 'react-router-dom';
 import Skills from './pages/Skills/Skills'
 import Portfolio from './pages/Portfolio/Portfolio';
 import About from './pages/About/About'
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
 class App extends Component {
   state = {
@@ -23,11 +24,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Link to='/about'>About    </Link>
-        <Link to='/skills'>Skills    </Link>
-        <Link to='/portfolio'>Portfolio   </Link>
-
-       
+        <Navbar bg="light" expand="lg">
+          <Container>
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to="/about">About</Nav.Link>
+              <Nav.Link as={Link} to="/about">Skills</Nav.Link>
+              <Nav.Link as={Link} to="/about">Portfolio</Nav.Link>
+              {/* Change to react bootstrap syntax
+              <Link to='/about'>About    </Link>
+              <Link to='/skills'>Skills    </Link>
+              <Link to='/portfolio'>Portfolio   </Link> */}
+            </Nav>
+          </Container>
+        </Navbar>
 
         <Switch>
         <Route path='/about' render={(props) => (
