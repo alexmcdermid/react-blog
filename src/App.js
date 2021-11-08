@@ -26,10 +26,10 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar bg="light" expand="lg">
-          <Container>
+          <Container >
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto m-auto">
               <Nav.Link as={Link} to="/about">About</Nav.Link>
               <Nav.Link as={Link} to="/skills">Skills</Nav.Link>
               <Nav.Link as={Link} to="/portfolio">Portfolio</Nav.Link>
@@ -55,8 +55,9 @@ class App extends Component {
          
           <Redirect to="/about" />
         </Switch>
+        <div className='formContainer'>
+        <Form className='form'>
         <h3>Some form on everypage for contact</h3>
-        <Form>
           <Form.Group>
             <Form.Label>Name</Form.Label>
             <Form.Control  
@@ -83,6 +84,7 @@ class App extends Component {
           </Form.Group>
           <Button onClick={this.handleFormSubmit}>Send</Button>
           </Form>
+          </div>
       </div>
     );
   }

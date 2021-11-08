@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+/* to center form */
+.formContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* to set form sizes */
+.form {
+  width: 80%;
+}
+
