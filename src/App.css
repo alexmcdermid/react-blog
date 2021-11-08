@@ -45,7 +45,7 @@ body > #root > div {
 
 /* place navbar at top always */
 .navbar {
-  margin-bottom: auto;
+  margin-bottom: 5%;
 }
 
 /* to center form and place at bottom*/
@@ -54,7 +54,7 @@ body > #root > div {
   justify-content: center;
   align-items: center;
   margin-top: auto;
-  padding-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 /* to set form sizes */

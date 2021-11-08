@@ -18,8 +18,22 @@ class App extends Component {
       [e.target.name]: e.target.value
     });
   };
-  handleFormSubmit = (e) => {
+  handleFormSubmit = async (e) => {
     e.preventDefault();
+    try {
+      let fetchResponse = await fetch("/api/contact", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({name:this.state.name,email:this.state.email,message:this.state.message}) // <-- send this object to server
+        }) 
+      let serverResponse = await fetchResponse.json() // <-- decode fetch response
+      console.log("Success:", serverResponse)   // <-- log server response
+
+      // if the contact was sent over without errors, set state to empty
+      this.setState({name:"",email:"",message:""})
+    } catch (err) {
+      console.error("Error:", err) // <-- log if error 
+    }
   }
 
   render() {
