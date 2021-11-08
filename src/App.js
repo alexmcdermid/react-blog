@@ -5,6 +5,7 @@ import Skills from './pages/Skills/Skills'
 import Portfolio from './pages/Portfolio/Portfolio';
 import About from './pages/About/About'
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component {
   state = {
@@ -26,6 +27,8 @@ class App extends Component {
       <div className="App">
         <Navbar bg="light" expand="lg">
           <Container>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/about">About</Nav.Link>
               <Nav.Link as={Link} to="/skills">Skills</Nav.Link>
@@ -35,6 +38,7 @@ class App extends Component {
               <Link to='/skills'>Skills    </Link>
               <Link to='/portfolio'>Portfolio   </Link> */}
             </Nav>
+            </Navbar.Collapse>
           </Container>
         </Navbar>
 
