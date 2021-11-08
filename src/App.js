@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" className='navbar'>
           <Container >
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

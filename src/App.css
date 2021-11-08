@@ -1,7 +1,13 @@
 .App {
   text-align: center;
-}
+  display: flex;
+  flex-direction: column;
 
+}
+/* telling the react body/root to use the entire page */
+body > #root > div {
+  height: 100vh;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -37,11 +43,18 @@
   }
 }
 
-/* to center form */
+/* place navbar at top always */
+.navbar {
+  margin-bottom: auto;
+}
+
+/* to center form and place at bottom*/
 .formContainer{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: auto;
+  padding-bottom: 5%;
 }
 
 /* to set form sizes */
