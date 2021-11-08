@@ -28,8 +28,8 @@ class App extends Component {
           <Container>
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/about">About</Nav.Link>
-              <Nav.Link as={Link} to="/about">Skills</Nav.Link>
-              <Nav.Link as={Link} to="/about">Portfolio</Nav.Link>
+              <Nav.Link as={Link} to="/skills">Skills</Nav.Link>
+              <Nav.Link as={Link} to="/portfolio">Portfolio</Nav.Link>
               {/* Change to react bootstrap syntax
               <Link to='/about'>About    </Link>
               <Link to='/skills'>Skills    </Link>
