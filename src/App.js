@@ -4,7 +4,7 @@ import { Route, Switch, Redirect, Link } from 'react-router-dom';
 import Skills from './pages/Skills/Skills'
 import Portfolio from './pages/Portfolio/Portfolio';
 import About from './pages/About/About'
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component {
@@ -56,39 +56,33 @@ class App extends Component {
           <Redirect to="/about" />
         </Switch>
         <h3>Some form on everypage for contact</h3>
-        <form>
-          <label>
-            <span>
-                Name
-            </span>
-            <input
+        <Form>
+          <Form.Group>
+            <Form.Label>Name</Form.Label>
+            <Form.Control  
             name="name"
+            placeholder="What is your name?"
             value={this.state.name}
-            onChange={this.handleFormChange}/>    
-          </label>
-          <br/>
-          <label>
-            <span>
-                Email
-            </span>
-            <input
+            onChange={this.handleFormChange}/>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Email</Form.Label>
+            <Form.Control  
             name="email"
+            placeholder="xxyyxx@xmail.com"
             value={this.state.email}
-            onChange={this.handleFormChange}/>    
-          </label>
-          <br/>
-          <label>
-            <span>
-                Message
-            </span>
-            <input
+            onChange={this.handleFormChange}/>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Message</Form.Label>
+            <Form.Control  
             name="message"
+            placeholder="What is your message to me?"
             value={this.state.message}
-            onChange={this.handleFormChange}/>    
-          </label>
-          <br/>
-          <button onClick={this.handleFormSubmit}>Send</button>
-          </form>
+            onChange={this.handleFormChange}/>
+          </Form.Group>
+          <Button onClick={this.handleFormSubmit}>Send</Button>
+          </Form>
       </div>
     );
   }
