@@ -1,1 +1,1 @@
-react portfolio website
+Basic react blog website using MERN
